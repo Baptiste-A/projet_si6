@@ -1,0 +1,112 @@
+form {
+  margin: 30px;
+}
+
+#legend_inf {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #66b266;
+  font-size: 12px;
+  padding: 3px;
+}
+
+#legend_sup {
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #66b266;
+}
+
+#global {
+  border: 2px solid #66b266;
+  border-radius: 5px;
+}
+
+#fieldset_inf {
+  border: 1px solid #66b266;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px;
+}
+
+#gauche {
+  width: 50%;
+  display: inline-block;
+}
+
+#droite {
+  width: 30%;
+  display: inline-block;
+  text-align: right;;
+}
+
+#submit {
+  width:150px;
+  height: 50px;
+  font-size: 20px;
+  background: white;
+  border: 2px solid #66b266;
+  border-radius: 5px;
+  transition: .2s;
+  margin: 10px;
+}
+
+#submit:hover {
+  background: #66b266;
+  transition: .2s;
+  color: white;
+}
+
+select {
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #66b266;
+  margin: 10px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+option:checked {
+  background-color: #66b266;
+  color: white;
+}
+
+option: {
+  background-color: red;
+}
+
+table{
+  border-collapse: collapse;
+  background-color: white;
+  margin: 2%;
+  width: 96%;
+}
+
+td, th {
+  border: 2px solid #66b266;
+}
+
+h2 {
+  text-align: center;
+}
+
+a {
+  background-color: white;
+  transition: .2s;
+  width: 8%;
+  color: black;
+  border: 2px solid #66b266;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+a.hover {
+  background-color: #66b266;
+  color: white;
+  transition: .2s;
+  border-radius: 10px;
+}

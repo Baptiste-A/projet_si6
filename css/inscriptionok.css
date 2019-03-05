@@ -1,0 +1,27 @@
+#merci {
+  font-size: 40px;
+}
+
+#corps {
+  text-align: center;
+}
+
+a {
+    background-color: white;
+    transition: .2s;
+    color: black;
+    border: 2px solid #66b266;
+    margin: 5px;
+    border-radius: 5px;
+    resize: none;
+    font-size: 16px;
+    padding: 5px;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #66b266;
+    color: white;
+    transition: .2s;
+  }

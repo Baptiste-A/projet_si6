@@ -1,0 +1,81 @@
+form {
+  margin: 30px;
+}
+
+#legend_inf {
+  text-align: center;
+  background-color: #656869;
+  color: white;
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#legend_sup {
+  text-align: center;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #66b266;
+}
+
+input {
+  border: 2px solid #66b266;
+  margin: 5px;
+  border-radius: 5px;
+  transition: .2s;
+  resize: none;
+  font-size: 16px;
+  padding: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+input:focus {
+  background-color: #66b266;
+  color: white;
+  transition: .2s;
+}
+
+fieldset {
+  margin: 20px;
+}
+
+#fieldset_sup {
+  border: 2px solid #66b266;
+}
+
+select {
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #66b266;
+  margin: 10px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+option:checked {
+  background-color: #66b266;
+  color: white;
+}
+
+option: {
+  background-color: red;
+}
+
+#bouttons {
+  width: 100%;
+  text-align: center;
+}
+
+#submit, #reset {
+  background-color: white;
+  transition: .2s;
+  width: 8%;
+  color: black;
+}
+
+#submit:hover, #reset:hover {
+  background-color: #66b266;
+  color: white;
+  transition: .2s;
+}
