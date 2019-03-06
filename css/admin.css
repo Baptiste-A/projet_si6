@@ -92,21 +92,69 @@ h2 {
   text-align: center;
 }
 
-a {
-  background-color: white;
+a{
+  text-decoration: none;
+}
+
+#boutton {
+  text-align: center;
+  border: 2px solid #66b266;
+  margin: 5px auto;
+  border-radius: 5px;
   transition: .2s;
-  width: 8%;
+  resize: none;
+  font-size: 16px;
+  padding: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: white;
   color: black;
+  background-color: white;
+  width: 4%;
+}
+
+#boutton:hover {
+  background-color: #66b266;
+}
+
+#tableau {
+  background-color: inherit;
+}
+
+#col1, #col2 {
+  border: none;
+  width: 50%;
+}
+
+#col1 {
+  text-align: right;
+  width: 45%
+}
+
+input {
   border: 2px solid #66b266;
   margin: 5px;
   border-radius: 5px;
+  transition: .2s;
+  resize: none;
   font-size: 16px;
   padding: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
-a.hover {
+input:focus {
   background-color: #66b266;
   color: white;
   transition: .2s;
-  border-radius: 10px;
+}
+
+#ok {
+  background-color: white;
+}
+
+#ok:hover {
+  background-color: #66b266;
+}
+
+#boutton_ok {
+  text-align: right;
 }

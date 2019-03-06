@@ -1,8 +1,34 @@
-<!DOCTYPE html>
-<html>
 <?php
     session_start();
+
+    include("connexion.php");
+
+    $valide = false;
+
+    if(isset($_POST['login']) && isset($_POST['password']))
+    {
+      $login = $_POST['login'];
+      $login_test = $bdd->query("SELECT *
+         FROM admin
+         WHERE id = \"$login\""
+       );
+
+      while($rowadmin = $login_test->fetch()) {
+        if($rowadmin['pass'] == $_POST['password']) {
+          $_SESSION['login'] = $_POST['login'];
+          $_SESSION['password'] = $_POST['password'];
+          $valide = true;
+        } else {
+          $valide = false;
+        }
+      }
+      $login_test->closeCursor();
+    }
+
 ?>
+
+<!DOCTYPE html>
+<html>
     <head>
         <meta charset="utf-8" />
         <title>Administration</title>
@@ -29,6 +55,38 @@
 	    		<img src="../img/jambes.png">
 	    	</div>
     	</div>
+
+      <?php
+
+        if(isset($_SESSION['login']) == false && isset($_SESSION['password']) == false || $valide == false) {
+
+      ?>
+
+      <form id="login" method="post" action="administration.php">
+              <fieldset id="global">
+                <legend id="legend_sup">Connexion</legend>
+                <table id="tableau">
+                  <tr>
+                    <td id="col1"><label for="login">Login :</label></td>
+                    <td id="col2"><input type="text" id="login" name="login" placeholder="Login" maxvalue="30" required /></td>
+                  </tr>
+                  <tr>
+                    <td id="col1"><label for="password">Password :</label></td>
+                    <td id="col2"><input type="password" id="password" name="password" placeholder="Password" maxvalue="30" required /></td>
+                  </tr>
+                </table>
+                <div id="boutton_ok">
+                  <input id="ok" type="submit" value="Connexion">
+                </div>
+              </fieldset>
+          </form>
+
+      <?php
+
+        }
+        else if($valide == true){
+
+      ?>
 
     	<div id="corps">
         <form id="contact" method="post" action="admin.php">
@@ -74,5 +132,12 @@
             </form>
 
     	</div>
+
+      <?php
+
+        }
+
+      ?>
+
     </body>
 </html>
