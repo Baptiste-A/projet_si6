@@ -5,24 +5,26 @@
 
     $valide = false;
 
-    if(isset($_POST['login']) && isset($_POST['password']))
-    {
-      $login = $_POST['login'];
-      $login_test = $bdd->query("SELECT *
-         FROM admin
-         WHERE id = \"$login\""
-       );
+    if($_SESSION['login'] && $_SESSION['password']) {
+      if(isset($_POST['login']) && isset($_POST['password']))
+      {
+        $login = $_POST['login'];
+        $login_test = $bdd->query("SELECT *
+           FROM admin
+           WHERE id = \"$login\""
+         );
 
-      while($rowadmin = $login_test->fetch()) {
-        if($rowadmin['pass'] == $_POST['password']) {
-          $_SESSION['login'] = $_POST['login'];
-          $_SESSION['password'] = $_POST['password'];
-          $valide = true;
-        } else {
-          $valide = false;
+        while($rowadmin = $login_test->fetch()) {
+          if($rowadmin['pass'] == $_POST['password']) {
+            $_SESSION['login'] = $_POST['login'];
+            $_SESSION['password'] = $_POST['password'];
+            $valide = true;
+          } else {
+            $valide = false;
+          }
         }
+        $login_test->closeCursor();
       }
-      $login_test->closeCursor();
     }
 
 ?>
@@ -96,39 +98,42 @@
                       <legend id="legend_inf">Afficher les inscriptions en attente</legend>
                       <input id="submit" type="submit" value="Valider">
                     </fieldset>
-                    <fieldset id="fieldset_inf">
-                      <legend id="legend_inf">Afficher équipe</legend>
-                      <div id="gauche">
-                        <label for="categorie">Choix de la catégorie :</label>
-                        <select>
-                          <option>- Choix de la catégorie -</option>
-                          <option>U7</option>
-                          <option>U8</option>
-                          <option>U9</option>
-                          <option>U10</option>
-                          <option>U11</option>
-                          <option>U12</option>
-                          <option>U13</option>
-                          <option>U14</option>
-                          <option>U15</option>
-                          <option>U16</option>
-                          <option>U17</option>
-                          <option>U18</option>
-                          <option>U19</option>
-                          <option>Seniors</option>
-                          <option>Vétérans</option>
-                        </select>
-                      </div>
-                      <div id="droite">
-                          <label for="sexe">Sexe :</label>
-                        <select>
-                          <option>- Sexe -</option>
-                          <option>Homme</option>
-                          <option>Femme</option>
-                        </select>
-                      </div>
-                    </fieldset>
-                </fieldset>
+        </form>
+        <form id="equipe" method="post" action="equipe.php">
+            <fieldset id="fieldset_inf">
+              <legend id="legend_inf">Afficher équipe</legend>
+              <div id="gauche">
+                <label for="categorie">Choix de la catégorie :</label>
+                <select name="categories">
+                  <option>- Choix de la catégorie -</option>
+                  <option value="6">U7</option>
+                  <option value="7">U8</option>
+                  <option value="8">U9</option>
+                  <option value="9">U10</option>
+                  <option value="10">U11</option>
+                  <option value="11">U12</option>
+                  <option value="12">U13</option>
+                  <option value="13">U14</option>
+                  <option value="14">U15</option>
+                  <option value="15">U16</option>
+                  <option value="16">U17</option>
+                  <option value="17">U18</option>
+                  <option value="18">U19</option>
+                  <option value="seniors">Seniors</option>
+                  <option value="veterans">Vétérans</option>
+                </select>
+              </div>
+              <div id="droite">
+                  <label for="sexe">Sexe :</label>
+                <select name="sexe">
+                  <option>- Sexe -</option>
+                  <option value="homme">Homme</option>
+                  <option value="femme">Femme</option>
+                </select>
+              </div>
+              <input id="equipe" type="submit" value="Valider">
+            </fieldset>
+        </fieldset>
             </form>
 
     	</div>

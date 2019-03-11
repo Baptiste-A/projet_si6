@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -12,7 +14,6 @@
   include("connexion.php");
   if(isset($_POST['numJoueur'])){
 
-    echo "numJoueur: ".$_POST['numJoueur'];
     $num = $_POST['numJoueur'];
     $suppr = $bdd->exec("UPDATE joueurs
         SET valide=1
