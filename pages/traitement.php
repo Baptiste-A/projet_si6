@@ -29,4 +29,4 @@
 
   $req = $query->execute($data);
 
-  header('Location: inscriptionok.html');
+  header('Location: inscriptionok.php');

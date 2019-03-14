@@ -5,8 +5,8 @@
 
     $valide = false;
 
-    if($_SESSION['login'] && $_SESSION['password']) {
-      if(isset($_POST['login']) && isset($_POST['password']))
+    //if(isset($_SESSION['login']) && isset($_SESSION['password'])) {
+      if($_POST['login'] && $_POST['password'])
       {
         $login = $_POST['login'];
         $login_test = $bdd->query("SELECT *
@@ -25,7 +25,7 @@
         }
         $login_test->closeCursor();
       }
-    }
+    //}
 
 ?>
 

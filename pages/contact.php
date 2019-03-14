@@ -30,10 +30,18 @@
     	</div>
 
     	<div id="corps">
-    		<form id="contact" method="post" action="traitement_formulaire.php">
+    		<form id="contact" method="post" action="contact2.php">
                 <fieldset>
                     <legend>Ecrivez-nous</legend>
                     <table>
+                      <tr>
+                        <td id="col1"><label for="prenom">Nom Prénom :</label></td>
+                        <td id="col2"><input type="text" id="prenom" name="prenom" /></td>
+                      </tr>
+                      <tr>
+                        <td id="col1"><label for="mail">E-Mail :</label></td>
+                        <td id="col2"><input type="mail" id="mail" name="mail" /></td>
+                      </tr>
                       <tr>
                         <td id="col1"><label for="objet">Objet :</label></td>
                         <td id="col2"><input type="text" id="objet" name="objet" /></td>

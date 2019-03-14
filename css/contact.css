@@ -62,3 +62,29 @@ fieldset {
 #col2 {
   width: 1000px;
 }
+
+#envoye {
+  font-size: 50px;
+  text-align: center;
+}
+
+#retour {
+  border: 2px solid #66b266;
+  margin: 30px;
+  border-radius: 5px;
+  transition: .2s;
+  width: 50%;
+  resize: none;
+  font-size: 16px;
+  padding: 5px;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+
+#retour:hover {
+  background-color: #66b266;
+  color: white;
+  transition: .2s;
+}

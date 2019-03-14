@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <title>Accueil</title>
@@ -24,7 +24,7 @@
 	    		</ul>
 	    	</div>
 	    	<div id="jambes">
-	    		<img src="img/jambes.png">
+	    		<img src="img/jambes.png" alt="photo de couverture">
 	    	</div>
     	</div>
 
